@@ -1,0 +1,38 @@
+.homepage_container>h1{
+    text-align: center;
+    padding: 1rem;
+}
+
+.filter_container{
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.filter_container>div{
+    border: 1px solid black;
+    border-radius: 0.625rem;
+}
+
+.filter_container input , .filter_container select {
+    font-size: 1.2rem;
+    padding: 0.4rem;
+    border: none;
+    outline: none;
+    border-radius: 0.625rem;
+}
+
+.filter_container select {
+    border-right: 1px solid black;
+    border-radius: 0.625rem 0 0 0.625rem;
+}
+
+
+
+.card_container{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}

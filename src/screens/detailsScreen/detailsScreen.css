@@ -1,0 +1,58 @@
+.details_screen_container{
+    width: 100%;
+    height: 100vh;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.details_image_container, .details_image_container>img{
+    width: 100%;
+    margin-top: 0.625rem;
+}
+
+.details_screen_container>div{
+    width: 50%;
+}
+
+.input_fields, .input_fields label{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.625rem;
+    font-size: 1.3rem;
+}
+
+.input_fields input, .input_fields option, .input_fields select{
+    font-size: 1.2rem;
+    padding: 0.4rem;
+}
+
+.input_fields>div{
+    display: flex;
+    justify-content: space-between;
+}
+
+button{
+    padding: 0.5rem 2rem;
+    margin-top: 0.625rem;
+    margin-bottom: 0.625rem;
+    cursor: pointer;
+    border-radius: 0.625rem;
+    border: none;
+    background-color: #0000ff;
+    color: #ffffff;
+}
+
+@media screen and (max-width: 659.5px) {
+    .input_fields>div{
+        flex-direction: column;
+    }
+
+    .details_screen_container>div{
+        width: 100%;
+    }
+}

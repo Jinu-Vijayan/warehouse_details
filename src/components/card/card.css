@@ -1,0 +1,33 @@
+.card{
+    width: 30%;
+    min-width: 280px;
+    padding: 0.625rem;
+    border-radius: 0.625rem;
+    border: none;
+    box-shadow: 0 0 2px 2px #d1d1d1;
+    cursor: pointer;
+}
+
+.card_image_container>img{
+    width: 100%;
+}
+
+.card_info_container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.location_container{
+    display: flex;
+    gap: 0.3rem;
+}
+
+.location_icon{
+    height: 20px;
+    width: 20px;
+}
+
+.location_icon>span{
+    height: 100%;
+    width: 100%;
+}
