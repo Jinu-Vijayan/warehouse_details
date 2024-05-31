@@ -2,12 +2,12 @@ import React, { useContext, useEffect, useRef, useState } from 'react';
 import './homeScreen.css';
 import data from '../../utils/data'
 import Card from '../../components/card/Card';
-import WarehouseDataContext from '../../context/warehouseDataContext';
+import { useSelector } from 'react-redux';
 
 function HomeScreen() {
 
-  // const [warehouseData, setWarehouseData] = useState(data);
-  const {warehouseData,setWarehouseData} = useContext(WarehouseDataContext)
+  const warehouseData = useSelector(state => state.warehouseData);
+
   const [filteredWarehouseData, setFilteredWareHouseData] = useState(data);
   const [searchQuery, setSearchQuery] = useState("");
 

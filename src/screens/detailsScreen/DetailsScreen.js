@@ -1,12 +1,15 @@
 import React, { useContext, useState } from "react";
 import "./detailsScreen.css";
-import { useParams } from "react-router-dom";
+import { json, useParams } from "react-router-dom";
 import WarehouseDataContext from "../../context/warehouseDataContext";
 import warehouseImage from "../../assets/images/warehouse_image.jpg";
+import { useDispatch, useSelector } from "react-redux";
 
 const DetailsScreen = () => {
   const { id } = useParams();
-  const { warehouseData, setWarehouseData } = useContext(WarehouseDataContext);
+
+  const warehouseData = useSelector(state => state.warehouseData);
+  const dispatch = useDispatch()
 
   const [isEditing, setIsEditing] = useState(false);
   const [warehouseName, setWarehouseName] = useState(
@@ -26,21 +29,18 @@ const DetailsScreen = () => {
   );
 
   function changeHandler(e, type) {
-    setWarehouseData((prev) => {
-      const data = [...prev];
-      const updatedData = data.map((elem) => {
-        if (elem.id - 1 === id - 1) {
-          console.log(elem[type]);
-          elem[type] = e.target.value;
-        }
-        return elem;
-      });
-      return updatedData;
+    const data = JSON.parse(JSON.stringify([...warehouseData]));
+    const updatedData = data.map((elem) => {
+      if (elem.id - 1 === id - 1) {
+        elem[type] = e.target.value;
+      }
+      return elem;
     });
-  }
 
-  function saveChanges() {
-    setIsEditing(false);
+    dispatch({
+      type : "EDIT",
+      payload : updatedData
+    });
   }
 
   return (
