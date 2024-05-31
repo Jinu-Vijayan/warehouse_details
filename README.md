@@ -65,7 +65,23 @@ The ability for users to add and update details for specific warehouses will be 
 
 - Tracking certifications and compliance requirements
 
-- Storing information about warehouse layout and equipmen
+- Storing information about warehouse layout and equipment
+
+## Pages
+
+### Home page
+
+![Image of the home page](./assets/images/screenshots/homePage.png)
+
+### Details Page
+
+![Image of the details page](./assets/images/screenshots/detailsPage.png)
+
+## Components
+
+### Warehouse card
+
+![Image of a card made to show warehouse data in home page](./assets/images/screenshots/warehouseCard.png)
 
 ## Contributing
 
